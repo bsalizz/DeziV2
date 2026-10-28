@@ -1,0 +1,57 @@
+{
+  "name": "deziv2",
+  "displayName": "Dezi v2",
+  "description": "Dezi, a cica a képernyő alján sétál és ugrál, külön panel nélkül.",
+  "version": "0.2.0",
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "deziv2.show",
+        "title": "Dezi v2: Cica megjelenítése"
+      },
+      {
+        "command": "deziv2.hide",
+        "title": "Dezi v2: Cica eltávolítása"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run check",
+    "lint": "eslint src",
+    "test": "node --test out/test/extension.test.js",
+    "check": "npm run compile && npm run lint",
+    "package": "vsce package --no-dependencies --allow-missing-repository --skip-license --out dist/",
+    "prepackage": "node -e \"require('node:fs').mkdirSync('dist', { recursive: true })\""
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.138.0",
+    "@vscode/vsce": "^4.0.0",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  }
+}

@@ -1,8 +1,8 @@
 {
   "name": "deziv2",
   "displayName": "Dezi v2",
-  "description": "Dezi, a cica a képernyő alján sétál és ugrál, külön panel nélkül.",
-  "version": "0.2.0",
+  "description": "Mindkettő Dezi a képernyő alján sétál és ugrál, külön panel nélkül.",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.138.0"
   },
@@ -17,11 +17,11 @@
     "commands": [
       {
         "command": "deziv2.show",
-        "title": "Dezi v2: Cica megjelenítése"
+        "title": "Dezi v2: Dezik megjelenítése"
       },
       {
         "command": "deziv2.hide",
-        "title": "Dezi v2: Cica eltávolítása"
+        "title": "Dezi v2: Dezik eltávolítása"
       }
     ]
   },
